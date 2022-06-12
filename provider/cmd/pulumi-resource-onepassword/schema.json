@@ -8,7 +8,7 @@
         "category/cloud"
     ],
     "homepage": "https://github.com/SimCubeLtd/pulumi-onepassword",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "attribution": "This Pulumi package is based on the [`onepassword` Terraform Provider](https://github.com/1Password/terraform-provider-onepassword).",
     "repository": "https://github.com/SimCubeLtd/pulumi-onepassword",
     "logoUrl": "https://avatars.githubusercontent.com/u/38230737?s=200\u0026v=4",

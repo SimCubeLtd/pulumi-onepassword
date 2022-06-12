@@ -50,7 +50,7 @@ setup(name='simcubeltd_pulumi_onepassword',
       project_urls={
           'Repository': 'https://github.com/SimCubeLtd/pulumi-onepassword'
       },
-      license='Apache-2.0',
+      license='MIT',
       packages=find_packages(),
       package_data={
           'simcubeltd_pulumi_onepassword': [

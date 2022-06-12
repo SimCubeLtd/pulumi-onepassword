@@ -9,7 +9,7 @@
     ],
     "homepage": "https://github.com/SimCubeLtd/pulumi-onepassword",
     "repository": "https://github.com/SimCubeLtd/pulumi-onepassword",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "scripts": {
         "build": "tsc",
         "install": "node scripts/install-pulumi-plugin.js resource onepassword ${VERSION}"

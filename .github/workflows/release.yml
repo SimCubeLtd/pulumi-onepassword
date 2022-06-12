@@ -29,6 +29,15 @@ jobs:
       uses: actions/checkout@v2
     - name: Unshallow clone for tags
       run: git fetch --prune --unshallow --tags
+    - name: Check worktree clean
+      run: |
+        git update-index -q --refresh
+        if ! git diff-files --quiet; then
+            >&2 echo "error: working tree is not clean, aborting!"
+            git status
+            git diff
+            exit 1
+        fi
     - name: Install Go
       uses: actions/setup-go@v2
       with:
