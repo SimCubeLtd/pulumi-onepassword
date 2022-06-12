@@ -12,7 +12,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as pulumi_onepassword from "@SimCubeLtd/pulumi-onepassword";
+ * import * as pulumi_onepassword from "@simcubeltd/pulumi-onepassword";
  *
  * const demoPassword = new onepassword.Item("demoPassword", {
  *     vault: _var.demo_vault,

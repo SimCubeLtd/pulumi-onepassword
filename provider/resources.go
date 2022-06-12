@@ -41,7 +41,7 @@ func Provider() tfbridge.ProviderInfo {
 		PluginDownloadURL: "https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}",
 		Description:       "A Pulumi package for creating and managing onepassword resources.",
 		Keywords:   []string{"pulumi", "onepassword", "category/cloud"},
-		License:    "Apache-2.0",
+		License:    "MIT",
 		Homepage:   "https://github.com/SimCubeLtd/pulumi-onepassword",
 		Repository: "https://github.com/SimCubeLtd/pulumi-onepassword",
 		GitHubOrg: "1Password",
@@ -77,7 +77,7 @@ func Provider() tfbridge.ProviderInfo {
             },
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
-		    PackageName: "@SimCubeLtd/pulumi-onepassword",
+		    PackageName: "@simcubeltd/pulumi-onepassword",
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
 			},

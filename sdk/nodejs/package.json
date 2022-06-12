@@ -1,5 +1,5 @@
 {
-    "name": "@SimCubeLtd/pulumi-onepassword",
+    "name": "@simcubeltd/pulumi-onepassword",
     "version": "${VERSION}",
     "description": "A Pulumi package for creating and managing onepassword resources.",
     "keywords": [
