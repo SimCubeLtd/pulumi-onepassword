@@ -177,11 +177,7 @@ namespace Pulumi.Onepassword
                 PluginDownloadURL = "https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}",
                 AdditionalSecretOutputs =
                 {
-                    "hostname",
                     "password",
-                    "port",
-                    "username",
-                    "vault",
                 },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
@@ -218,21 +214,11 @@ namespace Pulumi.Onepassword
         [Input("database")]
         public Input<string>? Database { get; set; }
 
-        [Input("hostname")]
-        private Input<string>? _hostname;
-
         /// <summary>
         /// (Only applies to the database category) The address where the database can be found
         /// </summary>
-        public Input<string>? Hostname
-        {
-            get => _hostname;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _hostname = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
+        [Input("hostname")]
+        public Input<string>? Hostname { get; set; }
 
         [Input("password")]
         private Input<string>? _password;
@@ -256,21 +242,11 @@ namespace Pulumi.Onepassword
         [Input("passwordRecipe")]
         public Input<Inputs.ItemPasswordRecipeArgs>? PasswordRecipe { get; set; }
 
-        [Input("port")]
-        private Input<string>? _port;
-
         /// <summary>
         /// (Only applies to the database category) The port the database is listening on.
         /// </summary>
-        public Input<string>? Port
-        {
-            get => _port;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _port = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
+        [Input("port")]
+        public Input<string>? Port { get; set; }
 
         [Input("sections")]
         private InputList<Inputs.ItemSectionArgs>? _sections;
@@ -314,37 +290,17 @@ namespace Pulumi.Onepassword
         [Input("url")]
         public Input<string>? Url { get; set; }
 
-        [Input("username")]
-        private Input<string>? _username;
-
         /// <summary>
         /// Username for this item.
         /// </summary>
-        public Input<string>? Username
-        {
-            get => _username;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _username = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
-
-        [Input("vault", required: true)]
-        private Input<string>? _vault;
+        [Input("username")]
+        public Input<string>? Username { get; set; }
 
         /// <summary>
         /// The UUID of the vault the item is in.
         /// </summary>
-        public Input<string>? Vault
-        {
-            get => _vault;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _vault = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
+        [Input("vault", required: true)]
+        public Input<string> Vault { get; set; } = null!;
 
         public ItemArgs()
         {
@@ -365,21 +321,11 @@ namespace Pulumi.Onepassword
         [Input("database")]
         public Input<string>? Database { get; set; }
 
-        [Input("hostname")]
-        private Input<string>? _hostname;
-
         /// <summary>
         /// (Only applies to the database category) The address where the database can be found
         /// </summary>
-        public Input<string>? Hostname
-        {
-            get => _hostname;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _hostname = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
+        [Input("hostname")]
+        public Input<string>? Hostname { get; set; }
 
         [Input("password")]
         private Input<string>? _password;
@@ -403,21 +349,11 @@ namespace Pulumi.Onepassword
         [Input("passwordRecipe")]
         public Input<Inputs.ItemPasswordRecipeGetArgs>? PasswordRecipe { get; set; }
 
-        [Input("port")]
-        private Input<string>? _port;
-
         /// <summary>
         /// (Only applies to the database category) The port the database is listening on.
         /// </summary>
-        public Input<string>? Port
-        {
-            get => _port;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _port = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
+        [Input("port")]
+        public Input<string>? Port { get; set; }
 
         [Input("sections")]
         private InputList<Inputs.ItemSectionGetArgs>? _sections;
@@ -461,21 +397,11 @@ namespace Pulumi.Onepassword
         [Input("url")]
         public Input<string>? Url { get; set; }
 
-        [Input("username")]
-        private Input<string>? _username;
-
         /// <summary>
         /// Username for this item.
         /// </summary>
-        public Input<string>? Username
-        {
-            get => _username;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _username = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
+        [Input("username")]
+        public Input<string>? Username { get; set; }
 
         /// <summary>
         /// The UUID of the item. Item identifiers are unique within a specific vault.
@@ -483,21 +409,11 @@ namespace Pulumi.Onepassword
         [Input("uuid")]
         public Input<string>? Uuid { get; set; }
 
-        [Input("vault")]
-        private Input<string>? _vault;
-
         /// <summary>
         /// The UUID of the vault the item is in.
         /// </summary>
-        public Input<string>? Vault
-        {
-            get => _vault;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _vault = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
+        [Input("vault")]
+        public Input<string>? Vault { get; set; }
 
         public ItemState()
         {

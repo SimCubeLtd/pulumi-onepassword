@@ -53,18 +53,6 @@ func Provider() tfbridge.ProviderInfo {
 		            "password": {
 		                Secret: tfbridge.True(),
 		            },
-                    "username": {
-		                Secret: tfbridge.True(),
-		            },
-                    "vault": {
-		                Secret: tfbridge.True(),
-		            },
-		             "hostname": {
-                        Secret: tfbridge.True(),
-                    },
-		             "port": {
-                        Secret: tfbridge.True(),
-                    },
 		        },
 		    },
 		},

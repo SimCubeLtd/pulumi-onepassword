@@ -626,21 +626,21 @@ class Item(pulumi.CustomResource):
 
             __props__.__dict__["category"] = category
             __props__.__dict__["database"] = database
-            __props__.__dict__["hostname"] = None if hostname is None else pulumi.Output.secret(hostname)
+            __props__.__dict__["hostname"] = hostname
             __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
             __props__.__dict__["password_recipe"] = password_recipe
-            __props__.__dict__["port"] = None if port is None else pulumi.Output.secret(port)
+            __props__.__dict__["port"] = port
             __props__.__dict__["sections"] = sections
             __props__.__dict__["tags"] = tags
             __props__.__dict__["title"] = title
             __props__.__dict__["type"] = type
             __props__.__dict__["url"] = url
-            __props__.__dict__["username"] = None if username is None else pulumi.Output.secret(username)
+            __props__.__dict__["username"] = username
             if vault is None and not opts.urn:
                 raise TypeError("Missing required property 'vault'")
-            __props__.__dict__["vault"] = None if vault is None else pulumi.Output.secret(vault)
+            __props__.__dict__["vault"] = vault
             __props__.__dict__["uuid"] = None
-        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["hostname", "password", "port", "username", "vault"])
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["password"])
         opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(Item, __self__).__init__(
             'onepassword:index/item:Item',

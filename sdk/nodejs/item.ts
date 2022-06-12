@@ -168,21 +168,21 @@ export class Item extends pulumi.CustomResource {
             }
             resourceInputs["category"] = args ? args.category : undefined;
             resourceInputs["database"] = args ? args.database : undefined;
-            resourceInputs["hostname"] = args?.hostname ? pulumi.secret(args.hostname) : undefined;
+            resourceInputs["hostname"] = args ? args.hostname : undefined;
             resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
             resourceInputs["passwordRecipe"] = args ? args.passwordRecipe : undefined;
-            resourceInputs["port"] = args?.port ? pulumi.secret(args.port) : undefined;
+            resourceInputs["port"] = args ? args.port : undefined;
             resourceInputs["sections"] = args ? args.sections : undefined;
             resourceInputs["tags"] = args ? args.tags : undefined;
             resourceInputs["title"] = args ? args.title : undefined;
             resourceInputs["type"] = args ? args.type : undefined;
             resourceInputs["url"] = args ? args.url : undefined;
-            resourceInputs["username"] = args?.username ? pulumi.secret(args.username) : undefined;
-            resourceInputs["vault"] = args?.vault ? pulumi.secret(args.vault) : undefined;
+            resourceInputs["username"] = args ? args.username : undefined;
+            resourceInputs["vault"] = args ? args.vault : undefined;
             resourceInputs["uuid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-        const secretOpts = { additionalSecretOutputs: ["hostname", "password", "port", "username", "vault"] };
+        const secretOpts = { additionalSecretOutputs: ["password"] };
         opts = pulumi.mergeOptions(opts, secretOpts);
         super(Item.__pulumiType, name, resourceInputs, opts);
     }

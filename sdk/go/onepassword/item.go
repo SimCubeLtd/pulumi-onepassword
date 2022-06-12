@@ -115,27 +115,11 @@ func NewItem(ctx *pulumi.Context,
 	if args.Vault == nil {
 		return nil, errors.New("invalid value for required argument 'Vault'")
 	}
-	if args.Hostname != nil {
-		args.Hostname = pulumi.ToSecret(args.Hostname).(pulumi.StringPtrOutput)
-	}
 	if args.Password != nil {
 		args.Password = pulumi.ToSecret(args.Password).(pulumi.StringPtrOutput)
 	}
-	if args.Port != nil {
-		args.Port = pulumi.ToSecret(args.Port).(pulumi.StringPtrOutput)
-	}
-	if args.Username != nil {
-		args.Username = pulumi.ToSecret(args.Username).(pulumi.StringPtrOutput)
-	}
-	if args.Vault != nil {
-		args.Vault = pulumi.ToSecret(args.Vault).(pulumi.StringOutput)
-	}
 	secrets := pulumi.AdditionalSecretOutputs([]string{
-		"hostname",
 		"password",
-		"port",
-		"username",
-		"vault",
 	})
 	opts = append(opts, secrets)
 	opts = pkgResourceDefaultOpts(opts)

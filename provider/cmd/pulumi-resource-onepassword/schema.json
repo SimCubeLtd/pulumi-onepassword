@@ -372,8 +372,7 @@
                 },
                 "hostname": {
                     "type": "string",
-                    "description": "(Only applies to the database category) The address where the database can be found\n",
-                    "secret": true
+                    "description": "(Only applies to the database category) The address where the database can be found\n"
                 },
                 "password": {
                     "type": "string",
@@ -386,8 +385,7 @@
                 },
                 "port": {
                     "type": "string",
-                    "description": "(Only applies to the database category) The port the database is listening on.\n",
-                    "secret": true
+                    "description": "(Only applies to the database category) The port the database is listening on.\n"
                 },
                 "sections": {
                     "type": "array",
@@ -417,8 +415,7 @@
                 },
                 "username": {
                     "type": "string",
-                    "description": "Username for this item.\n",
-                    "secret": true
+                    "description": "Username for this item.\n"
                 },
                 "uuid": {
                     "type": "string",
@@ -426,8 +423,7 @@
                 },
                 "vault": {
                     "type": "string",
-                    "description": "The UUID of the vault the item is in.\n",
-                    "secret": true
+                    "description": "The UUID of the vault the item is in.\n"
                 }
             },
             "required": [
@@ -447,8 +443,7 @@
                 },
                 "hostname": {
                     "type": "string",
-                    "description": "(Only applies to the database category) The address where the database can be found\n",
-                    "secret": true
+                    "description": "(Only applies to the database category) The address where the database can be found\n"
                 },
                 "password": {
                     "type": "string",
@@ -461,8 +456,7 @@
                 },
                 "port": {
                     "type": "string",
-                    "description": "(Only applies to the database category) The port the database is listening on.\n",
-                    "secret": true
+                    "description": "(Only applies to the database category) The port the database is listening on.\n"
                 },
                 "sections": {
                     "type": "array",
@@ -492,13 +486,11 @@
                 },
                 "username": {
                     "type": "string",
-                    "description": "Username for this item.\n",
-                    "secret": true
+                    "description": "Username for this item.\n"
                 },
                 "vault": {
                     "type": "string",
                     "description": "The UUID of the vault the item is in.\n",
-                    "secret": true,
                     "willReplaceOnChanges": true
                 }
             },
@@ -519,8 +511,7 @@
                     },
                     "hostname": {
                         "type": "string",
-                        "description": "(Only applies to the database category) The address where the database can be found\n",
-                        "secret": true
+                        "description": "(Only applies to the database category) The address where the database can be found\n"
                     },
                     "password": {
                         "type": "string",
@@ -533,8 +524,7 @@
                     },
                     "port": {
                         "type": "string",
-                        "description": "(Only applies to the database category) The port the database is listening on.\n",
-                        "secret": true
+                        "description": "(Only applies to the database category) The port the database is listening on.\n"
                     },
                     "sections": {
                         "type": "array",
@@ -564,8 +554,7 @@
                     },
                     "username": {
                         "type": "string",
-                        "description": "Username for this item.\n",
-                        "secret": true
+                        "description": "Username for this item.\n"
                     },
                     "uuid": {
                         "type": "string",
@@ -574,7 +563,6 @@
                     "vault": {
                         "type": "string",
                         "description": "The UUID of the vault the item is in.\n",
-                        "secret": true,
                         "willReplaceOnChanges": true
                     }
                 },
