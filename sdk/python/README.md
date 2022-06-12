@@ -1,5 +1,7 @@
 # 1Password Provider
-https://1password.com/
+[1Password Website](1password.com)
+
+Based on the [1Password terraform provider](https://github.com/1Password/terraform-provider-onepassword)
 
 &nbsp;
 
