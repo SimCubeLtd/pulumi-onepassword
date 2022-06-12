@@ -5,7 +5,7 @@ before:
   hooks:
     - make tfgen
 builds:
-  - binary: provider-resource-onepassword
+  - binary: pulumi-resource-onepassword
     dir: provider
     env:
       - CGO_ENABLED=0
