@@ -49,7 +49,7 @@ namespace Pulumi.Onepassword
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
-                PluginDownloadURL = "https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}",
+                PluginDownloadURL = "github://api.github.com/SimCubeLtd",
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.

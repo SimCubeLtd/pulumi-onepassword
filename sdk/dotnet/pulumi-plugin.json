@@ -1,5 +1,5 @@
 {
   "resource": true,
   "name": "onepassword",
-  "server": "https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}"
+  "server": "github://api.github.com/SimCubeLtd"
 }

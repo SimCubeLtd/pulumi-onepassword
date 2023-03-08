@@ -18,23 +18,26 @@ import (
 // package main
 //
 // import (
-// 	"github.com/SimCubeLtd/pulumi-onepassword/sdk/go/onepassword"
-// 	"github.com/pulumi/pulumi-onepassword/sdk/go/onepassword"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+//	"github.com/SimCubeLtd/pulumi-onepassword/sdk/go/onepassword"
+//	"github.com/pulumi/pulumi-onepassword/sdk/go/onepassword"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := onepassword.GetItem(ctx, &GetItemArgs{
-// 			Vault: _var.Demo_vault,
-// 			Uuid:  pulumi.StringRef(onepassword_item.Demo_sections.Uuid),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := onepassword.GetItem(ctx, &GetItemArgs{
+//				Vault: _var.Demo_vault,
+//				Uuid:  pulumi.StringRef(onepassword_item.Demo_sections.Uuid),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupItem(ctx *pulumi.Context, args *LookupItemArgs, opts ...pulumi.InvokeOption) (*LookupItemResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

@@ -19,7 +19,7 @@ type GetItemSection struct {
 // GetItemSectionInput is an input type that accepts GetItemSectionArgs and GetItemSectionOutput values.
 // You can construct a concrete instance of `GetItemSectionInput` via:
 //
-//          GetItemSectionArgs{...}
+//	GetItemSectionArgs{...}
 type GetItemSectionInput interface {
 	pulumi.Input
 
@@ -48,7 +48,7 @@ func (i GetItemSectionArgs) ToGetItemSectionOutputWithContext(ctx context.Contex
 // GetItemSectionArrayInput is an input type that accepts GetItemSectionArray and GetItemSectionArrayOutput values.
 // You can construct a concrete instance of `GetItemSectionArrayInput` via:
 //
-//          GetItemSectionArray{ GetItemSectionArgs{...} }
+//	GetItemSectionArray{ GetItemSectionArgs{...} }
 type GetItemSectionArrayInput interface {
 	pulumi.Input
 
@@ -128,7 +128,7 @@ type GetItemSectionField struct {
 // GetItemSectionFieldInput is an input type that accepts GetItemSectionFieldArgs and GetItemSectionFieldOutput values.
 // You can construct a concrete instance of `GetItemSectionFieldInput` via:
 //
-//          GetItemSectionFieldArgs{...}
+//	GetItemSectionFieldArgs{...}
 type GetItemSectionFieldInput interface {
 	pulumi.Input
 
@@ -160,7 +160,7 @@ func (i GetItemSectionFieldArgs) ToGetItemSectionFieldOutputWithContext(ctx cont
 // GetItemSectionFieldArrayInput is an input type that accepts GetItemSectionFieldArray and GetItemSectionFieldArrayOutput values.
 // You can construct a concrete instance of `GetItemSectionFieldArrayInput` via:
 //
-//          GetItemSectionFieldArray{ GetItemSectionFieldArgs{...} }
+//	GetItemSectionFieldArray{ GetItemSectionFieldArgs{...} }
 type GetItemSectionFieldArrayInput interface {
 	pulumi.Input
 
@@ -251,7 +251,7 @@ type ItemPasswordRecipe struct {
 // ItemPasswordRecipeInput is an input type that accepts ItemPasswordRecipeArgs and ItemPasswordRecipeOutput values.
 // You can construct a concrete instance of `ItemPasswordRecipeInput` via:
 //
-//          ItemPasswordRecipeArgs{...}
+//	ItemPasswordRecipeArgs{...}
 type ItemPasswordRecipeInput interface {
 	pulumi.Input
 
@@ -293,11 +293,11 @@ func (i ItemPasswordRecipeArgs) ToItemPasswordRecipePtrOutputWithContext(ctx con
 // ItemPasswordRecipePtrInput is an input type that accepts ItemPasswordRecipeArgs, ItemPasswordRecipePtr and ItemPasswordRecipePtrOutput values.
 // You can construct a concrete instance of `ItemPasswordRecipePtrInput` via:
 //
-//          ItemPasswordRecipeArgs{...}
+//	        ItemPasswordRecipeArgs{...}
 //
-//  or:
+//	or:
 //
-//          nil
+//	        nil
 type ItemPasswordRecipePtrInput interface {
 	pulumi.Input
 
@@ -443,7 +443,7 @@ type ItemSection struct {
 // ItemSectionInput is an input type that accepts ItemSectionArgs and ItemSectionOutput values.
 // You can construct a concrete instance of `ItemSectionInput` via:
 //
-//          ItemSectionArgs{...}
+//	ItemSectionArgs{...}
 type ItemSectionInput interface {
 	pulumi.Input
 
@@ -475,7 +475,7 @@ func (i ItemSectionArgs) ToItemSectionOutputWithContext(ctx context.Context) Ite
 // ItemSectionArrayInput is an input type that accepts ItemSectionArray and ItemSectionArrayOutput values.
 // You can construct a concrete instance of `ItemSectionArrayInput` via:
 //
-//          ItemSectionArray{ ItemSectionArgs{...} }
+//	ItemSectionArray{ ItemSectionArgs{...} }
 type ItemSectionArrayInput interface {
 	pulumi.Input
 
@@ -560,7 +560,7 @@ type ItemSectionField struct {
 // ItemSectionFieldInput is an input type that accepts ItemSectionFieldArgs and ItemSectionFieldOutput values.
 // You can construct a concrete instance of `ItemSectionFieldInput` via:
 //
-//          ItemSectionFieldArgs{...}
+//	ItemSectionFieldArgs{...}
 type ItemSectionFieldInput interface {
 	pulumi.Input
 
@@ -594,7 +594,7 @@ func (i ItemSectionFieldArgs) ToItemSectionFieldOutputWithContext(ctx context.Co
 // ItemSectionFieldArrayInput is an input type that accepts ItemSectionFieldArray and ItemSectionFieldArrayOutput values.
 // You can construct a concrete instance of `ItemSectionFieldArrayInput` via:
 //
-//          ItemSectionFieldArray{ ItemSectionFieldArgs{...} }
+//	ItemSectionFieldArray{ ItemSectionFieldArgs{...} }
 type ItemSectionFieldArrayInput interface {
 	pulumi.Input
 
@@ -690,7 +690,7 @@ type ItemSectionFieldPasswordRecipe struct {
 // ItemSectionFieldPasswordRecipeInput is an input type that accepts ItemSectionFieldPasswordRecipeArgs and ItemSectionFieldPasswordRecipeOutput values.
 // You can construct a concrete instance of `ItemSectionFieldPasswordRecipeInput` via:
 //
-//          ItemSectionFieldPasswordRecipeArgs{...}
+//	ItemSectionFieldPasswordRecipeArgs{...}
 type ItemSectionFieldPasswordRecipeInput interface {
 	pulumi.Input
 
@@ -732,11 +732,11 @@ func (i ItemSectionFieldPasswordRecipeArgs) ToItemSectionFieldPasswordRecipePtrO
 // ItemSectionFieldPasswordRecipePtrInput is an input type that accepts ItemSectionFieldPasswordRecipeArgs, ItemSectionFieldPasswordRecipePtr and ItemSectionFieldPasswordRecipePtrOutput values.
 // You can construct a concrete instance of `ItemSectionFieldPasswordRecipePtrInput` via:
 //
-//          ItemSectionFieldPasswordRecipeArgs{...}
+//	        ItemSectionFieldPasswordRecipeArgs{...}
 //
-//  or:
+//	or:
 //
-//          nil
+//	        nil
 type ItemSectionFieldPasswordRecipePtrInput interface {
 	pulumi.Input
 

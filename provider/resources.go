@@ -18,10 +18,10 @@ import (
 	"fmt"
 	"path/filepath"
 
+	"github.com/1Password/terraform-provider-onepassword/onepassword"
+	"github.com/SimCubeLtd/pulumi-onepassword/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/SimCubeLtd/pulumi-onepassword/provider/pkg/version"
-	"github.com/1Password/terraform-provider-onepassword/onepassword"
 )
 
 const (
@@ -33,39 +33,39 @@ func Provider() tfbridge.ProviderInfo {
 	p := shimv2.NewProvider(onepassword.Provider())
 
 	prov := tfbridge.ProviderInfo{
-		P:    p,
-		Name: "onepassword",
-		DisplayName: "1Password",
-		Publisher: "SimCubeLtd",
-		LogoURL: "https://avatars.githubusercontent.com/u/38230737?s=200&v=4",
-		PluginDownloadURL: "https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}",
+		P:                 p,
+		Name:              "onepassword",
+		DisplayName:       "1Password",
+		Publisher:         "SimCubeLtd",
+		LogoURL:           "https://avatars.githubusercontent.com/u/38230737?s=200&v=4",
+		PluginDownloadURL: "github://api.github.com/SimCubeLtd",
 		Description:       "A Pulumi package for creating and managing onepassword resources.",
-		Keywords:   []string{"pulumi", "onepassword", "category/cloud"},
-		License:    "MIT",
-		Homepage:   "https://github.com/SimCubeLtd/pulumi-onepassword",
-		Repository: "https://github.com/SimCubeLtd/pulumi-onepassword",
-		GitHubOrg: "1Password",
-		Config:    map[string]*tfbridge.SchemaInfo{},
-		Resources:            map[string]*tfbridge.ResourceInfo{
-		    "onepassword_item": {
-		        Tok: tfbridge.MakeResource(mainPkg, mainMod, "Item"),
-		        Fields: map[string]*tfbridge.SchemaInfo{
-		            "password": {
-		                Secret: tfbridge.True(),
-		            },
-		        },
-		    },
+		Keywords:          []string{"pulumi", "onepassword", "category/cloud"},
+		License:           "MIT",
+		Homepage:          "https://github.com/SimCubeLtd/pulumi-onepassword",
+		Repository:        "https://github.com/SimCubeLtd/pulumi-onepassword",
+		GitHubOrg:         "1Password",
+		Config:            map[string]*tfbridge.SchemaInfo{},
+		Resources: map[string]*tfbridge.ResourceInfo{
+			"onepassword_item": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "Item"),
+				Fields: map[string]*tfbridge.SchemaInfo{
+					"password": {
+						Secret: tfbridge.True(),
+					},
+				},
+			},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
 			"onepassword_item": {
-			    Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "GetItem"),
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "GetItem"),
 			},
 			"onepassword_vault": {
-  			    Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "GetVault"),
-            },
+				Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "GetVault"),
+			},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
-		    PackageName: "@simcubeltd/pulumi-onepassword",
+			PackageName: "@simcubeltd/pulumi-onepassword",
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
 			},
@@ -75,7 +75,7 @@ func Provider() tfbridge.ProviderInfo {
 			},
 		},
 		Python: &tfbridge.PythonInfo{
-		    PackageName: "simcubeltd_pulumi_onepassword",
+			PackageName: "simcubeltd_pulumi_onepassword",
 			Requires: map[string]string{
 				"pulumi": ">=3.0.0,<4.0.0",
 			},

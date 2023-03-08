@@ -174,7 +174,7 @@ namespace Pulumi.Onepassword
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
-                PluginDownloadURL = "https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}",
+                PluginDownloadURL = "github://api.github.com/SimCubeLtd",
                 AdditionalSecretOutputs =
                 {
                     "password",

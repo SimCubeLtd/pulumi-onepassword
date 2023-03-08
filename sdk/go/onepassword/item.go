@@ -19,50 +19,53 @@ import (
 // package main
 //
 // import (
-// 	"github.com/SimCubeLtd/pulumi-onepassword/sdk/go/onepassword"
-// 	"github.com/pulumi/pulumi-onepassword/sdk/go/onepassword"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+//	"github.com/SimCubeLtd/pulumi-onepassword/sdk/go/onepassword"
+//	"github.com/pulumi/pulumi-onepassword/sdk/go/onepassword"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := onepassword.NewItem(ctx, "demoPassword", &onepassword.ItemArgs{
-// 			Vault:    pulumi.Any(_var.Demo_vault),
-// 			Title:    pulumi.String("Demo Password Recipe"),
-// 			Category: pulumi.String("password"),
-// 			PasswordRecipe: &ItemPasswordRecipeArgs{
-// 				Length:  pulumi.Int(40),
-// 				Symbols: pulumi.Bool(false),
-// 			},
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		_, err = onepassword.NewItem(ctx, "demoLogin", &onepassword.ItemArgs{
-// 			Vault:    pulumi.Any(_var.Demo_vault),
-// 			Title:    pulumi.String("Demo Terraform Login"),
-// 			Category: pulumi.String("login"),
-// 			Username: pulumi.String("test@example.com"),
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		_, err = onepassword.NewItem(ctx, "demoDb", &onepassword.ItemArgs{
-// 			Vault:    pulumi.Any(_var.Demo_vault),
-// 			Category: pulumi.String("database"),
-// 			Type:     pulumi.String("mysql"),
-// 			Title:    pulumi.String("Demo TF Database"),
-// 			Username: pulumi.String("root"),
-// 			Database: pulumi.String("Example MySQL Instance"),
-// 			Hostname: pulumi.String("localhost"),
-// 			Port:     pulumi.String("3306"),
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := onepassword.NewItem(ctx, "demoPassword", &onepassword.ItemArgs{
+//				Vault:    pulumi.Any(_var.Demo_vault),
+//				Title:    pulumi.String("Demo Password Recipe"),
+//				Category: pulumi.String("password"),
+//				PasswordRecipe: &ItemPasswordRecipeArgs{
+//					Length:  pulumi.Int(40),
+//					Symbols: pulumi.Bool(false),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = onepassword.NewItem(ctx, "demoLogin", &onepassword.ItemArgs{
+//				Vault:    pulumi.Any(_var.Demo_vault),
+//				Title:    pulumi.String("Demo Terraform Login"),
+//				Category: pulumi.String("login"),
+//				Username: pulumi.String("test@example.com"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = onepassword.NewItem(ctx, "demoDb", &onepassword.ItemArgs{
+//				Vault:    pulumi.Any(_var.Demo_vault),
+//				Category: pulumi.String("database"),
+//				Type:     pulumi.String("mysql"),
+//				Title:    pulumi.String("Demo TF Database"),
+//				Username: pulumi.String("root"),
+//				Database: pulumi.String("Example MySQL Instance"),
+//				Hostname: pulumi.String("localhost"),
+//				Port:     pulumi.String("3306"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // ## Import
@@ -70,7 +73,9 @@ import (
 // # import an existing 1Password item
 //
 // ```sh
-//  $ pulumi import onepassword:index/item:Item myitem vaults/<vault uuid>/items/<item uuid>
+//
+//	$ pulumi import onepassword:index/item:Item myitem vaults/<vault uuid>/items/<item uuid>
+//
 // ```
 type Item struct {
 	pulumi.CustomResourceState
@@ -295,7 +300,7 @@ func (i *Item) ToItemOutputWithContext(ctx context.Context) ItemOutput {
 // ItemArrayInput is an input type that accepts ItemArray and ItemArrayOutput values.
 // You can construct a concrete instance of `ItemArrayInput` via:
 //
-//          ItemArray{ ItemArgs{...} }
+//	ItemArray{ ItemArgs{...} }
 type ItemArrayInput interface {
 	pulumi.Input
 
@@ -320,7 +325,7 @@ func (i ItemArray) ToItemArrayOutputWithContext(ctx context.Context) ItemArrayOu
 // ItemMapInput is an input type that accepts ItemMap and ItemMapOutput values.
 // You can construct a concrete instance of `ItemMapInput` via:
 //
-//          ItemMap{ "key": ItemArgs{...} }
+//	ItemMap{ "key": ItemArgs{...} }
 type ItemMapInput interface {
 	pulumi.Input
 

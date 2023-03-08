@@ -24,6 +24,6 @@
     },
     "pulumi": {
         "resource": true,
-        "pluginDownloadURL": "https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}"
+        "pluginDownloadURL": "github://api.github.com/SimCubeLtd"
     }
 }
