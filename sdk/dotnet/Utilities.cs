@@ -53,7 +53,7 @@ namespace Pulumi.Onepassword
         {
             var dst = src ?? new global::Pulumi.InvokeOptions{};
             dst.Version = src?.Version ?? Version;
-            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}";
+            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "github://api.github.com/SimCubeLtd";
             return dst;
         }
 

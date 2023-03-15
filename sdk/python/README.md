@@ -5,7 +5,7 @@ Based on the [1Password terraform provider](https://github.com/1Password/terrafo
 
 &nbsp;
 
-The 1Password resource provider for Pulumi lets you use 1Password resources in your Infrastructure as Code deployments.
+Use the 1Password Pulumi Provider to reference, create, or update items in your existing vaults using [1Password Secrets Automation](https://developer.1password.com/docs/connect/).
 
 
 ## Installing

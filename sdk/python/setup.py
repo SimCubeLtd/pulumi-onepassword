@@ -15,7 +15,7 @@ class InstallPluginCommand(install):
     def run(self):
         install.run(self)
         try:
-            check_call(['pulumi', 'plugin', 'install', 'resource', 'onepassword', PLUGIN_VERSION, '--server', 'https://github.com/SimCubeLtd/pulumi-onepassword/releases/download/v${VERSION}'])
+            check_call(['pulumi', 'plugin', 'install', 'resource', 'onepassword', PLUGIN_VERSION, '--server', 'github://api.github.com/SimCubeLtd'])
         except OSError as error:
             if error.errno == errno.ENOENT:
                 print(f"""
