@@ -28,7 +28,7 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v2
     - name: Unshallow clone for tags
-      run: git fetch --prune --unshallow --tags
+      run: git fetch --prune --unshallow --tags --force
     - name: Check worktree clean
       run: |
         git update-index -q --refresh
